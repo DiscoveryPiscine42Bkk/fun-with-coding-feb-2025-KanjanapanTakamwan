@@ -1,0 +1,46 @@
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+
+table {
+    width: 100vw;
+    height: 100vh;
+    border-collapse: collapse;
+}
+
+
+td {
+    width: 50%;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    font-size: 2rem;
+}
+
+.box1 {
+    background-color: #8cc7ee;
+}
+
+.box2 {
+    background-color: #e0b6dd;
+}
+
+@media (max-width: 600px) {
+    td {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+}
