@@ -33,7 +33,7 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #ffd8f0; /* สีพื้นหลังของเมนู */
+    background-color: #ffd8f0; 
     min-width: 150px;
     border-radius: 5px;
     overflow: hidden;
@@ -51,7 +51,7 @@ body {
 
 
 .dropdown-content a:hover {
-    background-color: #0992ee; /* สีพื้นหลังเมื่อ hover */
+    background-color: #0992ee; 
 }
 
 
