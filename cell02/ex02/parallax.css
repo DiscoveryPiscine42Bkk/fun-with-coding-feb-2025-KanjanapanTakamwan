@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.parallax {
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px black;
+}
+
+.img1 {
+    background-image: url('https://www.daco-thai.com/wp-content/uploads/2024/06/tomjerry-cover.jpg');
+}
+
+.img2 {
+    background-image: url('https://wallpapers.com/images/featured/tom-and-jerry-pictures-2qo6el27bq295eqy.jpg');
+}
+
+
+.content {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 1.5rem;
+}
