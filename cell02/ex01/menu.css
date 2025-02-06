@@ -1,0 +1,60 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: white;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #2c3e50; 
+    color: white;
+    padding: 12px 20px;
+    font-size: 24px; 
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffd8f0; /* สีพื้นหลังของเมนู */
+    min-width: 150px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    transition: background 0.3s;
+}
+
+
+.dropdown-content a:hover {
+    background-color: #0992ee; /* สีพื้นหลังเมื่อ hover */
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
