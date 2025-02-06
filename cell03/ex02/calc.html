@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    input[type="number"] {
+      width: 80px;
+      padding: 5px;
+      margin: 5px;
+    }
+    select {
+      padding: 5px;
+    }
+    input[type="submit"] {
+      padding: 5px 15px;
+      background-color: lightblue;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Simple Calculator</h1>
+  <form id="calculator">
+    <input type="text" id="leftOperand" placeholder="Left" required>
+    <select id="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+    <input type="text" id="rightOperand" placeholder="Right" required>
+    <input type="submit" value="Try me!">
+  </form>
+
+  <script>
+    const calculatorForm = document.getElementById("calculator");
+
+    calculatorForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const leftOperand = document.getElementById("leftOperand").value.trim();
+      const operator = document.getElementById("operator").value;
+      const rightOperand = document.getElementById("rightOperand").value.trim();
+
+      
+      if (!/^\d+$/.test(leftOperand) || !/^\d+$/.test(rightOperand)) {
+        alert('Error :(');
+        return;
+      }
+
+      
+      const left = parseInt(leftOperand, 10);
+      const right = parseInt(rightOperand, 10);
+
+      
+      if ((operator === '/' || operator === '%') && right === 0) {
+        alert("It's over 9000!");
+        console.error("It's over 9000!");
+        return;
+      }
+
+      
+      let result;
+      switch (operator) {
+        case '+': result = left + right; break;
+        case '-': result = left - right; break;
+        case '*': result = left * right; break;
+        case '/': result = left / right; break;
+        case '%': result = left % right; break;
+        default: result = 'Error :(';
+      }
+
+      
+      alert(`Result: ${result}`);
+      console.log(`Result: ${result}`);
+    });
+
+    setInterval(() => alert("Please, use me..."), 30000);
+  </script>
+</body>
+</html>
