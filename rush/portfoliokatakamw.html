@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Basic reset for body and html */
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(167, 48, 48);
+    color: white;
+    padding: 10px 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+    align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+}
+
+/* เพิ่ม container ห่อเมนูเพื่อช่วยให้จัดกลาง */
+.navbar .nav-links {
+    display: flex;
+    gap: 20px; /* ปรับระยะห่างของเมนู */
+}
+
+/* จัดสไตล์ของลิงก์ */
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 18px;
+}
+
+/* Hover Effect */
+.navbar a:hover {
+    background-color: #000000;
+}
+
+
+        /* Parallax Section Styling */
+        .parallax {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 900px;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            color: white;
+        }
+
+        /* Text Styling inside Parallax Sections */
+        .parallax-text {
+            font-size: 48px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        /* About Me Section */
+        .about-me-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 50px 20px;
+            background-color: #f9f0ef;
+        }
+
+        .about-me-container img {
+            width: 300px;
+            height: 300px;
+            border-radius: 0%;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-me-info {
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .about-me-info h2 {
+            font-size: 36px;
+            color: #a73030;
+        }
+
+        .about-me-info p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .about-me-info .info-label {
+            font-weight: bold;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 50px 20px;
+        }
+
+        .certificates {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+        }
+
+        .certificates img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .certificates h3 {
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* First Parallax background */
+        #first {
+            background-image: url('https://d.newsweek.com/en/full/1905075/file-photo-smiling-dog.jpg?w=1600&h=1600&q=88&f=9f3d5e5cbc46149afafc81b9e8306f79');
+        }
+
+        /* Second Parallax background */
+        #second {
+            background-image: url('https://i.redd.it/gd7suscsqp781.jpg');
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 50px 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .contact h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            font-size: 18px;
+        }
+
+        /* Heading Style for Sections */
+        .section-heading {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #A73030; /* Dark red color for heading */
+            font-weight: bold;
+        }
+
+        /* My Skills Section using Flexbox */
+        #skills .textcontent {
+            display: flex;
+            flex-direction: column; /* Arrange the text vertically */
+            justify-content: center; /* Center vertically */
+            align-items: center;     /* Center horizontally */
+            padding: 20px;           /* Add some padding for spacing */
+}
+
+    </style>
+    <title>My Portfolio</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="#about">main</a>
+            <a href="#about">about</a>
+            <a href="#portfolio">experience</a>
+            <a href="#contact">contact</a>
+        </div>
+    </div>
+
+    <!-- First Parallax Section -->
+    <div class="parallax" id="first">
+        <div class="parallax-text">SKAEWMAN's Portfolio</div>
+    </div>
+
+    <!-- About Me Section -->
+    <div id="about" class="about-me-container">
+        <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/02/01/13/jameson-pfeiffer-syndrome.jpg" alt="Profile Picture">
+        <div class="about-me-info">
+            <h2>About Me</h2>
+            <p><span class="info-label">Name:</span> Sasiwimol Kaewmanee</p>
+            <p><span class="info-label">Faculty:</span> Department of Computer Engineering
+                Bachelor of Engineering program in Physics and IoT System
+                Dual Degree Program</p>
+        </div>
+    </div>
+
+    <!-- Second Parallax Section -->
+    <div class="parallax" id="second">
+        <div class="parallax-text">EXPERIENCE</div>
+    </div>
+
+    <!-- My Project Section -->
+    <div id="portfolio">
+        <div class="section-heading">My Project</div>  <!-- Heading for Portfolio Section -->
+        <div class="portfolio">
+            <div class="certificates">
+                <img src="https://scontent.fbkk29-1.fna.fbcdn.net/v/t39.30808-6/476463087_3927349427529327_2450089940464093137_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGF_zKYywfYc-SJE3vQnSPjElgJhtAQQL8SWAmG0BBAv03vtsYyer18ikT2Tt2noqel8C4GgAaAu-3-UjrSM36z&_nc_ohc=FbnvxuUE59wQ7kNvgExNtCv&_nc_oc=AdhGPNLu5EsKCYGaGhBTvmpFfXNX1VuQ2eCfCimzAFmNVN7ifNQbnNsdvnO_JX2amDM&_nc_zt=23&_nc_ht=scontent.fbkk29-1.fna&_nc_gid=Aq0S0CZsEPdCUG16RU8lM8D&oh=00_AYCTYQcisuzqFm8aT75KXH_oA5VQaKDA6PdXSmoBt-KJtQ&oe=67ABC1CC" alt="Project 1">
+                <h3>Earthquake AI</h3>
+                <p>A brief description of the project goes here. It can include the tools and technologies used.</p>
+            </div>
+            <div class="certificates">
+                <img src="https://scontent.fbkk29-9.fna.fbcdn.net/v/t39.30808-6/476925814_3927354534195483_6218126853251130736_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF3vte4I9u2Z0s5hgCBxVgqVVFXUhGg6WRVUVdSEaDpZI4S5oh-4tsUls8SQ0gfJ0gBunLcX-45FIm5K1LrPJlo&_nc_ohc=1CW_j5PzLjAQ7kNvgHwe1oM&_nc_oc=AdjthrW4Q0R8VSFGEPJKjijd1_2jiKx0f0ozwEefP5gW_rd1xQ_pYjge_BLjQTFfZ_A&_nc_zt=23&_nc_ht=scontent.fbkk29-9.fna&_nc_gid=A5kv4vT6LUzmcPBgjQ52g3V&oh=00_AYDB-4iK_Cb5EpbYZdTDCGXaMop62fbWJklTUbPSXf9YDA&oe=67ABDCDA" alt="Project 2">
+                <h3>NIAU Application</h3>
+                <p>A brief description of the project goes here. It can include the tools and technologies used.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- My Certificates Section -->
+    <div id="certificates">
+        <div class="section-heading">My Certificates</div>
+        <div class="portfolio">
+            <div class="certificates">
+                <img src="https://scontent.fbkk29-1.fna.fbcdn.net/v/t39.30808-6/476463087_3927349427529327_2450089940464093137_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGF_zKYywfYc-SJE3vQnSPjElgJhtAQQL8SWAmG0BBAv03vtsYyer18ikT2Tt2noqel8C4GgAaAu-3-UjrSM36z&_nc_ohc=FbnvxuUE59wQ7kNvgExNtCv&_nc_oc=AdhGPNLu5EsKCYGaGhBTvmpFfXNX1VuQ2eCfCimzAFmNVN7ifNQbnNsdvnO_JX2amDM&_nc_zt=23&_nc_ht=scontent.fbkk29-1.fna&_nc_gid=AeXiFBj6B-iX0aPler4M6bX&oh=00_AYBl4T0lyiU1vibwI8gPs7hOmoa097LYEGIfrdxOzqlBFA&oe=67ABC1CC" alt="Certificates 1">
+                <h3>My Order</h3>
+                <p>รายละเอียดเกี่ยวกับทักษะนี้ เช่น เครื่องมือที่ใช้และความสามารถในการทำงานนี้</p>
+            </div>
+            <div class="certificates">
+                <img src="https://scontent.fbkk29-9.fna.fbcdn.net/v/t39.30808-6/476925814_3927354534195483_6218126853251130736_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF3vte4I9u2Z0s5hgCBxVgqVVFXUhGg6WRVUVdSEaDpZI4S5oh-4tsUls8SQ0gfJ0gBunLcX-45FIm5K1LrPJlo&_nc_ohc=1CW_j5PzLjAQ7kNvgHwe1oM&_nc_oc=AdjthrW4Q0R8VSFGEPJKjijd1_2jiKx0f0ozwEefP5gW_rd1xQ_pYjge_BLjQTFfZ_A&_nc_zt=23&_nc_ht=scontent.fbkk29-9.fna&_nc_gid=AMKvYePfMEkpTqBSrv-oJI_&oh=00_AYCgjhYSe-76yjmu4UjyotQYigQqH2vLuvDrlSUxjWvw4A&oe=67ABDCDA" alt="Certificates 2">
+                <h3>นนทรีเกมส์ 2567</h3>
+                <p>รายละเอียดเกี่ยวกับทักษะนี้ เช่น เครื่องมือที่ใช้และความสามารถในการทำงานนี้</p>
+            </div>
+            <div class="certificates">
+                <img src="https://scontent.fbkk29-1.fna.fbcdn.net/v/t39.30808-6/476609878_3927398914191045_8339294737752108729_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGVEpk7csV8ESoMJent4MxfEccJIJ8Xo8kRxwkgnxejye559EEU161Z05XpShWDPOsiTZGChz6PNBSc7v8u7evO&_nc_ohc=4mcUsZRhQ2oQ7kNvgEk0KM7&_nc_oc=AdhBruskstPEAI67wvOtdn7gRXMketF87TgYNnnFdggbxhpEF-WUcq_CPinsCCYHvh8&_nc_zt=23&_nc_ht=scontent.fbkk29-1.fna&_nc_gid=AYgE6lrVOXop6DPCQ9yPwrw&oh=00_AYANQQp7QWvQVn97deOKroj2HtUa1Ft9scTk0Q7nMsOQGw&oe=67ABDDC5" alt="Certificates 4">
+                <h3>ChulaMooc-Learn Python</h3>
+                <p>รายละเอียดเกี่ยวกับทักษะนี้ เช่น เครื่องมือที่ใช้และความสามารถในการทำงานนี้</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- My Skills Section -->
+    <div id="skills">
+        <div class="section-heading">My Skills</div>
+        <div class="textcontent">
+            <p><strong>Programming Languages:</strong> Python, Java, JavaScript, C++</p>
+            <p><strong>Web Development:</strong> HTML, CSS, React, Node.js</p>
+            <p><strong>Tools:</strong> Git, Docker, Kubernetes, Figma</p>
+            <p><strong>Other Skills:</strong> Machine Learning, Data Analysis, Cloud Computing</p>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>If you're interested in collaborating or just want to say hello, feel free to reach out to me!</p>
+        <p>Email: your-email@example.com</p>
+        <p>
