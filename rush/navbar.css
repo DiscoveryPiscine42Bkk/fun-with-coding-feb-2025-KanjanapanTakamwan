@@ -7,6 +7,7 @@ body {
     height: 100vh;
     position: relative;
     font-family: "Inconsolata", serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .header {
@@ -14,10 +15,17 @@ body {
     border-bottom: 5px #fff solid;
     width: fit-content;
     margin-bottom: 22px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+
     h1 {
         color: white;
         font-size: 48px;
         line-height: 0.5;
+        white-space: nowrap;
+
+        @media screen and (max-width: 800px) {
+            font-size: 32px;
+        }
     }
 }
 
@@ -32,7 +40,7 @@ body {
     flex-direction: column;
     gap: 48px;
 
-    background-image: url('https://4kwallpapers.com/images/wallpapers/stars-in-sky-dark-3840x2160-15485.jpg');
+    background-image: url('https://scontent.fbkk29-4.fna.fbcdn.net/v/t39.30808-6/475858583_2026356797832130_815031330251209498_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=ivR7P8IE4kQQ7kNvgEUBDqR&_nc_oc=Adg-seUOFF0RYbKuIsP8-_6-kma-unSx93MX1Pox8ygMLxBBN2-TghwLRlEotJgYro768HGy5qi242KEESuhRHvR&_nc_zt=23&_nc_ht=scontent.fbkk29-4.fna&_nc_gid=AcMeAYoJpECH7hqICxqa1m6&oh=00_AYDwtHYPkKW7UqpXRWkRZ24Vx9723c87Wqtop30A1IcfRg&oe=67ABFF93');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -48,8 +56,13 @@ body {
         width: 100%;
 
         .detail {
-            width: calc(45%);
+            width: 46%;
             padding: 16px 0 16px 5%;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+
+            @media screen and (max-width: 800px) {
+                width: 75%;
+            }
 
             h1 {
                 text-align: left;
@@ -58,26 +71,42 @@ body {
             h2 {
                 color: white;
                 font-size: 32px;
+
+                @media screen and (max-width: 800px) {
+                    font-size: 24px;
+                }
             }
 
             p {
                 color: white;
                 font-size: 22px;
+
+                @media screen and (max-width: 800px) {
+                    font-size: 14px;
+                }
             }
         }
 
         .img {
-            width: 50%;
+            width: 44%;
             aspect-ratio: 1 / 1;
             overflow: hidden;
             position: relative;
+
+            @media screen and (max-width: 800px) {
+                width: 75%;
+            }
 
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
                 object-position: center;
+
+                border-radius: 50%;
+                box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             }
+
         }
     }
 
@@ -108,10 +137,15 @@ body {
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             padding: 20px;
-            width: 400px;
+            width: 100%;
+            max-width: 400px;
             cursor: pointer;
             transition: transform 0.3s;
             position: relative;
+
+            @media screen and (max-width: 800px) {
+                width: 80%;
+            }
 
             img {
                 width: 100%;
@@ -124,6 +158,10 @@ body {
             h2 {
                 margin: 10px 0;
                 font-size: 1.2em;
+
+                @media screen and (max-width: 800px) {
+                    font-size: 0.8em;
+                }
             }
 
             p {
@@ -140,11 +178,16 @@ body {
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             padding: 20px;
+            padding-bottom: 32px;
             width: 45%;
-            height: 450px;
+            height: fit-content;
             cursor: pointer;
             transition: transform 0.3s;
             position: relative;
+
+            @media screen and (max-width: 800px) {
+                width: 75%;
+            }
 
             img {
                 width: 200px;
@@ -159,6 +202,10 @@ body {
             h2 {
                 margin: 10px 0;
                 font-size: 1.2em;
+
+                @media screen and (max-width: 800px) {
+                    font-size: 0.8em;
+                }
             }
 
             p {
@@ -222,6 +269,19 @@ body {
         color: #3d3d3d;
         border-radius: 15px;
         box-shadow: 4px 4px 10px #3d3d3d;
+        font-size: 32px;
+    }
+
+    @media screen and (max-width: 800px) {
+        h1 {
+            font-size: 18px;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        h1 {
+            font-size: 12px;
+        }
     }
 }
 
@@ -246,12 +306,17 @@ body {
     align-items: center;
     width: 60px;
     height: 60px;
+
     border-radius: 50%;
     background: #ffffff;
     transition: background 0.3s;
     text-decoration: none;
     box-shadow: 4px 4px 10px #3d3d3d;
 
+    @media screen and (max-width: 800px) {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 .circle-navbar .nav-item a img {
@@ -274,6 +339,11 @@ body {
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 0.8rem;
+
+    @media screen and (max-width: 800px) {
+        font-size: 0.8em;
+    }
+
     white-space: nowrap;
 }
 
@@ -281,11 +351,22 @@ body {
     svg {
         width: 24px;
         height: 24px;
+
+        @media screen and (max-width: 800px) {
+            width: 20px;
+            height: 20px;
+        }
     }
 }
+
 .tooltipLink {
     svg {
         width: 24px;
         height: 24px;
+
+        @media screen and (max-width: 800px) {
+            width: 20px;
+            height: 20px;
+        }
     }
 }
