@@ -53,13 +53,18 @@
 
       
       $balloon.on('mouseleave', function () {
-        size = Math.max(200, size - 5);
-        $balloon.css({
-          width: `${size}px`,
-          height: `${size}px`,
-          backgroundColor: colors[(colorIndex - 1 + colors.length) % colors.length]
-        });
-        colorIndex = (colorIndex - 1 + colors.length) % colors.length;
+        if (size > 200){
+          size = Math.max(200, size - 5);
+
+          $balloon.css({
+            width: `${size}px`,
+            height: `${size}px`,
+            backgroundColor: colors[(colorIndex - 1 + colors.length) % colors.length]
+          });
+          colorIndex = (colorIndex - 1 + colors.length) % colors.length;
+        }
+       
+      
       });
     });
   </script>
